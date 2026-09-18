@@ -1,0 +1,1173 @@
+[
+  {
+    "id": "th-1023",
+    "eventNumber": "TH-1023",
+    "title": "Sangrur Agricultural Field Thermal Cluster",
+    "region": "Punjab, India",
+    "latitude": 30.2458,
+    "longitude": 75.8421,
+    "detectionTimestamp": "2026-09-18T10:32:00Z",
+    "satelliteSource": "VIIRS (NOAA-20)",
+    "instrument": "VIIRS",
+    "isSimulation": false,
+    "status": "CATEGORIZED",
+    "thermalFeatures": {
+      "brightnessK": 332.4,
+      "frpMW": 18.5,
+      "confidence": "nominal (84%)",
+      "scan": 0.38,
+      "track": 0.36,
+      "persistenceHours": 1.8,
+      "dayNight": "D",
+      "sensorBand": "VIIRS I-4 (3.74 μm)"
+    },
+    "contextualFactors": {
+      "landUseType": "Intensive Cropland (Paddy/Wheat)",
+      "landUseDescription": "Agricultural field parcels in Sangrur district, Punjab, India.",
+      "agriculturalContext": "Active post-monsoon paddy harvest clearing window.",
+      "isCropHarvestSeason": true,
+      "industrialProximityKm": 8.4,
+      "nearestIndustrialFacility": null,
+      "vegetationContext": "Harvested cropland parcels with low vegetative moisture, stubble load.",
+      "ndviValue": 0.28,
+      "historicalPattern": "Repeated seasonal hotspot cluster recorded annually in October-November.",
+      "clusterCount": 2,
+      "settlementProximityKm": 2.8
+    },
+    "satelliteImagery": {
+      "available": false,
+      "statusText": "Satellite imagery unavailable for this event — Thermal observation available",
+      "imageType": "none",
+      "imageUrl": null,
+      "isDemoImage": false,
+      "sensorName": "Sentinel-2 MSI (Next pass in 28 hrs)",
+      "passTime": null
+    },
+    "imageAnalysis": {
+      "isAnalyzed": false,
+      "isPrototype": true,
+      "modelUsed": "Prototype Visual Analysis",
+      "detectedFeatures": [],
+      "visualSummary": "No high-resolution optical overpass coincided with this thermal detection time.",
+      "analyzedAt": null
+    },
+    "categorization": {
+      "primaryCategory": "agricultural_burning",
+      "categoryLabel": "🌾 Agricultural Burning",
+      "assessment": "Confirmed seasonal agricultural crop-field burning",
+      "supportingEvidence": [
+        "Event located in confirmed agricultural land (Intensive Cropland (Paddy/Wheat))",
+        "No nearby industrial facility detected (nearest is 8.4 km away)",
+        "Active seasonal harvest/stubble clearance window in this agricultural belt",
+        "Moderate Fire Radiative Power (18.5 MW) consistent with crop residue burning",
+        "Short-duration thermal anomaly (1.8 hrs), consistent with rapid field stubble combustion",
+        "Historical pattern: Repeated seasonal hotspot cluster recorded annually in October-November."
+      ],
+      "contradictingOrMissing": [
+        "Associated high-resolution satellite imagery not yet captured for this pass",
+        "Ground verification evidence not yet available"
+      ],
+      "alternativeExplanations": [
+        {
+          "category": "agricultural_burning",
+          "categoryLabel": "🌾 Agricultural Burning",
+          "level": "Strong evidence",
+          "rationale": "Event located in confirmed agricultural land (Intensive Cropland (Paddy/Wheat)); No nearby industrial facility detected (nearest is 8.4 km away)"
+        },
+        {
+          "category": "vegetation_fire",
+          "categoryLabel": "🌳 Vegetation / Wildland Fire",
+          "level": "Low evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "industrial_incident",
+          "categoryLabel": "🏭 Industrial Incident",
+          "level": "Insufficient evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "waste_burning",
+          "categoryLabel": "🗑️ Waste / Open Burning",
+          "level": "Insufficient evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "unknown_insufficient",
+          "categoryLabel": "❓ Unknown / Unresolved",
+          "level": "Possible",
+          "rationale": "Uncertainty remains pending field inspection and high-resolution optical passes."
+        }
+      ],
+      "evidenceStatus": "Strong Evidence",
+      "investigationPriority": 38,
+      "priorityLevel": "LOW",
+      "priorityExplanation": "This score represents investigation priority based on thermal intensity, persistence, proximity to structures, and uncertainty. It is NOT a probability of fire."
+    },
+    "groundEvidence": [],
+    "advancedML": {
+      "isolationForestScore": -0.11,
+      "isolationForestLabel": "Typical Seasonal Thermal Profile",
+      "randomForestWeights": [
+        {
+          "category": "agricultural_burning",
+          "label": "🌾 Agricultural Burning",
+          "weight": 0.917
+        },
+        {
+          "category": "industrial_incident",
+          "label": "🏭 Industrial Incident",
+          "weight": 0
+        },
+        {
+          "category": "vegetation_fire",
+          "label": "🌳 Vegetation Fire",
+          "weight": 0.083
+        },
+        {
+          "category": "waste_burning",
+          "label": "🗑️ Waste / Open Burning",
+          "weight": 0
+        }
+      ],
+      "featureImportance": [
+        {
+          "feature": "Land-Use Classification",
+          "importance": 0.34,
+          "direction": "supports",
+          "contribution": "Classified as Intensive Cropland (Paddy/Wheat)"
+        },
+        {
+          "feature": "Industrial Proximity Buffer",
+          "importance": 0.26,
+          "direction": "refutes",
+          "contribution": "8.4 km to closest registered industrial asset"
+        },
+        {
+          "feature": "Fire Radiative Power (FRP)",
+          "importance": 0.18,
+          "direction": "supports",
+          "contribution": "18.5 MW energy dissipation rate"
+        },
+        {
+          "feature": "Seasonal Phenology Window",
+          "importance": 0.14,
+          "direction": "supports",
+          "contribution": "Within post-harvest residue clearing cycle"
+        },
+        {
+          "feature": "Thermal Persistence (Hours)",
+          "importance": 0.08,
+          "direction": "supports",
+          "contribution": "1.8 hrs across successive overpasses"
+        }
+      ],
+      "spatialClustering": {
+        "clusterId": "CLUST-MULTI-0.4",
+        "nearbyHotspotsCount": 2,
+        "spatialSpreadKm": 0.7
+      }
+    },
+    "timeline": [
+      {
+        "id": "tl-1",
+        "time": "10:32",
+        "title": "Thermal anomaly detected",
+        "description": "VIIRS 375m sensor registered 18.5 MW FRP hotspot at 30.2458°N, 75.8421°E.",
+        "stage": "DETECTED"
+      },
+      {
+        "id": "tl-2",
+        "time": "10:34",
+        "title": "Contextual and land-use analysis",
+        "description": "Overlayed with Bhuvan/Copernicus land cover. Cropland identified, no industrial assets within 8km.",
+        "stage": "ANALYSIS"
+      },
+      {
+        "id": "tl-3",
+        "time": "10:35",
+        "title": "Incident categorized",
+        "description": "Categorized as Possible Agricultural Burning (Moderate Evidence). Priority score: 48/100.",
+        "stage": "CATEGORIZED"
+      }
+    ]
+  },
+  {
+    "id": "th-1087",
+    "eventNumber": "TH-1087",
+    "title": "Dahej PCPIR Petrochemical Flare / Incident",
+    "region": "Gujarat, India",
+    "latitude": 21.7142,
+    "longitude": 72.5891,
+    "detectionTimestamp": "2026-09-18T08:14:00Z",
+    "satelliteSource": "VIIRS (Suomi NPP)",
+    "instrument": "VIIRS",
+    "isSimulation": false,
+    "status": "INVESTIGATION REQUIRED",
+    "thermalFeatures": {
+      "brightnessK": 368.1,
+      "frpMW": 58.2,
+      "confidence": "high (98%)",
+      "scan": 0.42,
+      "track": 0.38,
+      "persistenceHours": 5.2,
+      "dayNight": "N",
+      "sensorBand": "VIIRS I-4 (3.74 μm)"
+    },
+    "contextualFactors": {
+      "landUseType": "Heavy Industrial / Chemical Processing Zone",
+      "landUseDescription": "Petrochemical manufacturing and hydrocarbon processing corridor, Dahej PCPIR, Gujarat.",
+      "agriculturalContext": "Non-agricultural industrial saltpan and reclaimed coastal infrastructure.",
+      "isCropHarvestSeason": false,
+      "industrialProximityKm": 0.3,
+      "nearestIndustrialFacility": "Dahej Hydrocarbon Cracking Complex (Unit B)",
+      "facilityType": "Petrochemical Refinery & Cracking Plant",
+      "vegetationContext": "Industrial paved surface and storage tank bunds, NDVI: 0.08.",
+      "ndviValue": 0.08,
+      "historicalPattern": "Persistent thermal venting footprint during plant turnaround cycles.",
+      "clusterCount": 4,
+      "settlementProximityKm": 4.5
+    },
+    "satelliteImagery": {
+      "available": true,
+      "statusText": "Associated satellite imagery available (Nighttime SWIR Band)",
+      "imageType": "false_color_swir",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+      "isDemoImage": true,
+      "sensorName": "VIIRS Nighttime High-Radiance Band",
+      "passTime": "2026-09-18T08:14:00Z"
+    },
+    "imageAnalysis": {
+      "isAnalyzed": true,
+      "isPrototype": true,
+      "modelUsed": "Prototype Visual Analysis (Heuristic Context Engine)",
+      "detectedFeatures": [
+        {
+          "name": "Smoke visible",
+          "observed": true,
+          "confidenceNote": "Low-density diffuse atmospheric dispersion observed"
+        },
+        {
+          "name": "Flame-like visual indicators",
+          "observed": true,
+          "confidenceNote": "Localized high-radiance reflection point detected"
+        },
+        {
+          "name": "Agricultural field pattern",
+          "observed": false,
+          "confidenceNote": "No distinct field grid pattern"
+        },
+        {
+          "name": "Industrial structures",
+          "observed": true,
+          "confidenceNote": "Rectilinear metallic roofing and pipeline corridors"
+        },
+        {
+          "name": "Dense vegetation",
+          "observed": false,
+          "confidenceNote": "Fragmented or sparse canopy"
+        },
+        {
+          "name": "Open/waste area",
+          "observed": false,
+          "confidenceNote": "No waste mound features"
+        },
+        {
+          "name": "Urban surroundings",
+          "observed": true,
+          "confidenceNote": "Peri-urban access road network present in 2km buffer"
+        },
+        {
+          "name": "No obvious visual evidence",
+          "observed": false,
+          "confidenceNote": "Observation obscured by sub-pixel resolution or atmospheric haze"
+        }
+      ],
+      "visualSummary": "Visual context indicates localized high-radiance point adjacent to manufacturing infrastructure.",
+      "analyzedAt": "2026-09-18T16:49:07.901Z"
+    },
+    "categorization": {
+      "primaryCategory": "industrial_incident",
+      "categoryLabel": "🏭 Industrial Incident",
+      "assessment": "Active industrial flare or thermal facility event",
+      "supportingEvidence": [
+        "Zoned industrial territory or manufacturing complex (Heavy Industrial / Chemical Processing Zone)",
+        "Immediate proximity to industrial facility (Dahej Hydrocarbon Cracking Complex (Unit B) at 0.3 km)",
+        "High Fire Radiative Power (58.2 MW) typical of industrial flares or intense thermal stacks",
+        "Persistent thermal anomaly detected across multiple observation cycles (5.2 hrs)",
+        "Visual analysis: industrial roofing or machinery structures observed"
+      ],
+      "contradictingOrMissing": [
+        "Ground verification evidence not yet available"
+      ],
+      "alternativeExplanations": [
+        {
+          "category": "industrial_incident",
+          "categoryLabel": "🏭 Industrial Incident",
+          "level": "Strong evidence",
+          "rationale": "Zoned industrial territory or manufacturing complex (Heavy Industrial / Chemical Processing Zone); Immediate proximity to industrial facility (Dahej Hydrocarbon Cracking Complex (Unit B) at 0.3 km)"
+        },
+        {
+          "category": "vegetation_fire",
+          "categoryLabel": "🌳 Vegetation / Wildland Fire",
+          "level": "Possible",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "agricultural_burning",
+          "categoryLabel": "🌾 Agricultural Burning",
+          "level": "Insufficient evidence",
+          "rationale": "Visual analysis: plume dispersal pattern consistent with open-air combustion"
+        },
+        {
+          "category": "waste_burning",
+          "categoryLabel": "🗑️ Waste / Open Burning",
+          "level": "Insufficient evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "unknown_insufficient",
+          "categoryLabel": "❓ Unknown / Unresolved",
+          "level": "Possible",
+          "rationale": "Uncertainty remains pending field inspection and high-resolution optical passes."
+        }
+      ],
+      "evidenceStatus": "Strong Evidence",
+      "investigationPriority": 94,
+      "priorityLevel": "HIGH",
+      "priorityExplanation": "This score represents investigation priority based on thermal intensity, persistence, proximity to structures, and uncertainty. It is NOT a probability of fire."
+    },
+    "groundEvidence": [],
+    "evidenceFusion": {
+      "satelliteSummary": [
+        "Satellite Source: 368.1K brightness, 58.2 MW FRP",
+        "Duration & Area: ~5.2 hrs persistence, localized footprint",
+        "Context: Heavy Industrial / Chemical Processing Zone, Industrial distance 0.3 km"
+      ],
+      "imageSummary": [
+        "Smoke visible",
+        "Flame-like visual indicators",
+        "Industrial structures",
+        "Urban surroundings"
+      ],
+      "groundSummary": [
+        "Ground verification pending"
+      ],
+      "combinedAssessment": "Industrial Incident — Requires Safety Protocol Investigation",
+      "finalCategory": "industrial_incident",
+      "confidenceOutcome": "Strong Evidence",
+      "recommendedAction": "Notify district industrial safety inspectorate and verify facility emission logs."
+    },
+    "advancedML": {
+      "isolationForestScore": -0.64,
+      "isolationForestLabel": "High Thermal Outlier (Uncommon Signature)",
+      "randomForestWeights": [
+        {
+          "category": "agricultural_burning",
+          "label": "🌾 Agricultural Burning",
+          "weight": 0
+        },
+        {
+          "category": "industrial_incident",
+          "label": "🏭 Industrial Incident",
+          "weight": 0.813
+        },
+        {
+          "category": "vegetation_fire",
+          "label": "🌳 Vegetation Fire",
+          "weight": 0.188
+        },
+        {
+          "category": "waste_burning",
+          "label": "🗑️ Waste / Open Burning",
+          "weight": 0
+        }
+      ],
+      "featureImportance": [
+        {
+          "feature": "Land-Use Classification",
+          "importance": 0.34,
+          "direction": "neutral",
+          "contribution": "Classified as Heavy Industrial / Chemical Processing Zone"
+        },
+        {
+          "feature": "Industrial Proximity Buffer",
+          "importance": 0.26,
+          "direction": "supports",
+          "contribution": "0.3 km to closest registered industrial asset"
+        },
+        {
+          "feature": "Fire Radiative Power (FRP)",
+          "importance": 0.18,
+          "direction": "supports",
+          "contribution": "58.2 MW energy dissipation rate"
+        },
+        {
+          "feature": "Seasonal Phenology Window",
+          "importance": 0.14,
+          "direction": "neutral",
+          "contribution": "Off-season baseline"
+        },
+        {
+          "feature": "Thermal Persistence (Hours)",
+          "importance": 0.08,
+          "direction": "supports",
+          "contribution": "5.2 hrs across successive overpasses"
+        }
+      ],
+      "spatialClustering": {
+        "clusterId": "CLUST-MULTI-0.4",
+        "nearbyHotspotsCount": 4,
+        "spatialSpreadKm": 1.4
+      }
+    },
+    "timeline": [
+      {
+        "id": "tl-201",
+        "time": "08:14",
+        "title": "High-radiance thermal anomaly detected",
+        "description": "Suomi NPP detected high FRP (58.2 MW) persistent thermal source.",
+        "stage": "DETECTED"
+      },
+      {
+        "id": "tl-202",
+        "time": "08:16",
+        "title": "Infrastructure proximity matched",
+        "description": "Hotspot located 300m from Unit B cracking furnace.",
+        "stage": "ANALYSIS"
+      },
+      {
+        "id": "tl-203",
+        "time": "08:18",
+        "title": "Categorized as Industrial Incident",
+        "description": "Investigation Priority: 88/100 (HIGH PRIORITY). Facility safety notification flagged.",
+        "stage": "CATEGORIZED"
+      }
+    ]
+  },
+  {
+    "id": "th-1142",
+    "eventNumber": "TH-1142",
+    "title": "Ghazipur Perimeter Waste Thermal Anomaly",
+    "region": "Delhi NCR, India",
+    "latitude": 28.6264,
+    "longitude": 77.3298,
+    "detectionTimestamp": "2026-09-18T09:12:00Z",
+    "satelliteSource": "MODIS (Terra)",
+    "instrument": "MODIS",
+    "isSimulation": false,
+    "status": "GROUND EVIDENCE RECEIVED",
+    "thermalFeatures": {
+      "brightnessK": 322.5,
+      "frpMW": 8.4,
+      "confidence": "nominal (78%)",
+      "scan": 0.5,
+      "track": 0.4,
+      "persistenceHours": 2.1,
+      "dayNight": "D",
+      "sensorBand": "MODIS Band 21 (3.96 μm)"
+    },
+    "contextualFactors": {
+      "landUseType": "Solid Waste Disposal / Peri-Urban Landfill",
+      "landUseDescription": "Municipal dumping facility boundary, East Delhi / Ghaziabad border.",
+      "agriculturalContext": "Non-agricultural municipal utility zone.",
+      "isCropHarvestSeason": false,
+      "industrialProximityKm": 2.9,
+      "nearestIndustrialFacility": "Patparganj Light Engineering Estate (2.9 km)",
+      "vegetationContext": "Barren waste accumulation slopes, sparse scrub, NDVI: 0.12.",
+      "ndviValue": 0.12,
+      "historicalPattern": "Recurrent methane-induced combustion pockets along north face.",
+      "clusterCount": 1,
+      "settlementProximityKm": 0.7
+    },
+    "satelliteImagery": {
+      "available": false,
+      "statusText": "Satellite imagery unavailable for this event — Thermal observation available",
+      "imageType": "none",
+      "imageUrl": null,
+      "isDemoImage": false,
+      "sensorName": null,
+      "passTime": null
+    },
+    "imageAnalysis": {
+      "isAnalyzed": true,
+      "isPrototype": true,
+      "modelUsed": "Prototype Visual Analysis (Heuristic Context Engine)",
+      "detectedFeatures": [
+        {
+          "name": "Smoke visible",
+          "observed": false,
+          "confidenceNote": "No distinct smoke plume detected"
+        },
+        {
+          "name": "Flame-like visual indicators",
+          "observed": false,
+          "confidenceNote": "No distinct open flame geometry resolved"
+        },
+        {
+          "name": "Agricultural field pattern",
+          "observed": false,
+          "confidenceNote": "No distinct field grid pattern"
+        },
+        {
+          "name": "Industrial structures",
+          "observed": false,
+          "confidenceNote": "No industrial infrastructure identified"
+        },
+        {
+          "name": "Dense vegetation",
+          "observed": false,
+          "confidenceNote": "Fragmented or sparse canopy"
+        },
+        {
+          "name": "Open/waste area",
+          "observed": true,
+          "confidenceNote": "Irregular earthen mound morphology and cleared perimeter"
+        },
+        {
+          "name": "Urban surroundings",
+          "observed": true,
+          "confidenceNote": "Peri-urban access road network present in 2km buffer"
+        },
+        {
+          "name": "No obvious visual evidence",
+          "observed": false,
+          "confidenceNote": "Observation obscured by sub-pixel resolution or atmospheric haze"
+        }
+      ],
+      "visualSummary": "Visual evidence is ambiguous or low-resolution; ground verification recommended.",
+      "analyzedAt": "2026-09-18T16:49:07.901Z"
+    },
+    "categorization": {
+      "primaryCategory": "waste_burning",
+      "categoryLabel": "🗑️ Waste / Open Burning",
+      "assessment": "Confirmed localized waste / open landfill combustion",
+      "supportingEvidence": [
+        "Located in or adjacent to waste disposal / peri-urban open zone (Solid Waste Disposal / Peri-Urban Landfill)",
+        "Low vegetation index (NDVI: 0.12) with urban/settlement proximity (0.7 km)",
+        "Visual analysis: open disposal pit / perimeter waste accumulation visible",
+        "Ground verification confirmed: \"Dense white-grey smoke issuing from waste accumulation tier 3 near perimeter ditch.\" (Observed by Municipal Environmental Patrol)"
+      ],
+      "contradictingOrMissing": [],
+      "alternativeExplanations": [
+        {
+          "category": "waste_burning",
+          "categoryLabel": "🗑️ Waste / Open Burning",
+          "level": "Strong evidence",
+          "rationale": "Located in or adjacent to waste disposal / peri-urban open zone (Solid Waste Disposal / Peri-Urban Landfill); Low vegetation index (NDVI: 0.12) with urban/settlement proximity (0.7 km)"
+        },
+        {
+          "category": "agricultural_burning",
+          "categoryLabel": "🌾 Agricultural Burning",
+          "level": "Possible",
+          "rationale": "Moderate Fire Radiative Power (8.4 MW) consistent with crop residue burning; Short-duration thermal anomaly (2.1 hrs), consistent with rapid field stubble combustion"
+        },
+        {
+          "category": "industrial_incident",
+          "categoryLabel": "🏭 Industrial Incident",
+          "level": "Low evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "vegetation_fire",
+          "categoryLabel": "🌳 Vegetation / Wildland Fire",
+          "level": "Insufficient evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "unknown_insufficient",
+          "categoryLabel": "❓ Unknown / Unresolved",
+          "level": "Possible",
+          "rationale": "Uncertainty remains pending field inspection and high-resolution optical passes."
+        }
+      ],
+      "evidenceStatus": "Strong Evidence",
+      "investigationPriority": 62,
+      "priorityLevel": "MEDIUM",
+      "priorityExplanation": "This score represents investigation priority based on thermal intensity, persistence, proximity to structures, and uncertainty. It is NOT a probability of fire."
+    },
+    "groundEvidence": [
+      {
+        "id": "ge-301",
+        "eventId": "th-1142",
+        "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80",
+        "description": "Dense white-grey smoke issuing from waste accumulation tier 3 near perimeter ditch.",
+        "latitude": 28.6258,
+        "longitude": 77.3292,
+        "timestamp": "2026-09-18T09:40:00Z",
+        "reporterRole": "Municipal Environmental Patrol",
+        "visualIndicators": [
+          "Smoke visible",
+          "Open/waste area",
+          "Urban surroundings"
+        ],
+        "observedCategory": "waste_burning",
+        "notes": "No structural fire or agricultural fields. Surface refuse combustion confirmed."
+      }
+    ],
+    "evidenceFusion": {
+      "satelliteSummary": [
+        "Satellite Source: 322.5K brightness, 8.4 MW FRP",
+        "Duration & Area: ~2.1 hrs persistence, localized footprint",
+        "Context: Solid Waste Disposal / Peri-Urban Landfill, Industrial distance 2.9 km"
+      ],
+      "imageSummary": [
+        "Open/waste area",
+        "Urban surroundings"
+      ],
+      "groundSummary": [
+        "Municipal Environmental Patrol: \"Dense white-grey smoke issuing from waste accumulation tier 3 near perimeter ditch.\" (2026-09-18T09:40:00Z)"
+      ],
+      "combinedAssessment": "🗑️ Waste / Open Burning — Strong Evidence",
+      "finalCategory": "waste_burning",
+      "confidenceOutcome": "Strong Evidence",
+      "recommendedAction": "Continue routine satellite monitoring."
+    },
+    "advancedML": {
+      "isolationForestScore": -0.27,
+      "isolationForestLabel": "Typical Seasonal Thermal Profile",
+      "randomForestWeights": [
+        {
+          "category": "agricultural_burning",
+          "label": "🌾 Agricultural Burning",
+          "weight": 0.161
+        },
+        {
+          "category": "industrial_incident",
+          "label": "🏭 Industrial Incident",
+          "weight": 0.065
+        },
+        {
+          "category": "vegetation_fire",
+          "label": "🌳 Vegetation Fire",
+          "weight": 0
+        },
+        {
+          "category": "waste_burning",
+          "label": "🗑️ Waste / Open Burning",
+          "weight": 0.774
+        }
+      ],
+      "featureImportance": [
+        {
+          "feature": "Land-Use Classification",
+          "importance": 0.34,
+          "direction": "neutral",
+          "contribution": "Classified as Solid Waste Disposal / Peri-Urban Landfill"
+        },
+        {
+          "feature": "Industrial Proximity Buffer",
+          "importance": 0.26,
+          "direction": "refutes",
+          "contribution": "2.9 km to closest registered industrial asset"
+        },
+        {
+          "feature": "Fire Radiative Power (FRP)",
+          "importance": 0.18,
+          "direction": "supports",
+          "contribution": "8.4 MW energy dissipation rate"
+        },
+        {
+          "feature": "Seasonal Phenology Window",
+          "importance": 0.14,
+          "direction": "neutral",
+          "contribution": "Off-season baseline"
+        },
+        {
+          "feature": "Thermal Persistence (Hours)",
+          "importance": 0.08,
+          "direction": "supports",
+          "contribution": "2.1 hrs across successive overpasses"
+        }
+      ],
+      "spatialClustering": {
+        "clusterId": "CLUST-SINGLE-0.5",
+        "nearbyHotspotsCount": 1,
+        "spatialSpreadKm": 0.35
+      }
+    },
+    "timeline": [
+      {
+        "id": "tl-301",
+        "time": "09:12",
+        "title": "Thermal anomaly detected",
+        "description": "MODIS Terra registered 8.4 MW thermal emission at 28.6264°N, 77.3298°E.",
+        "stage": "DETECTED"
+      },
+      {
+        "id": "tl-302",
+        "time": "09:15",
+        "title": "Peri-urban context matched",
+        "description": "Located in solid waste management boundary, 700m from dense settlement.",
+        "stage": "ANALYSIS"
+      },
+      {
+        "id": "tl-303",
+        "time": "09:20",
+        "title": "Ground verification requested",
+        "description": "Proximity to residential pocket prompted dispatch of municipal inspector.",
+        "stage": "VERIFICATION REQUIRED"
+      },
+      {
+        "id": "tl-304",
+        "time": "09:40",
+        "title": "Ground evidence received",
+        "description": "Inspector uploaded photo: \"Dense white-grey smoke issuing from waste tier 3\".",
+        "stage": "GROUND EVIDENCE RECEIVED"
+      },
+      {
+        "id": "tl-305",
+        "time": "09:44",
+        "title": "Combined assessment generated",
+        "description": "Evidence fusion confirms Waste / Open Burning — Strong Evidence.",
+        "stage": "FUSION"
+      }
+    ]
+  },
+  {
+    "id": "th-1195",
+    "eventNumber": "TH-1195",
+    "title": "Pali Scrubland Ambiguous Hotspot",
+    "region": "Rajasthan, India",
+    "latitude": 25.7712,
+    "longitude": 73.3245,
+    "detectionTimestamp": "2026-09-18T07:22:00Z",
+    "satelliteSource": "MODIS (Aqua)",
+    "instrument": "MODIS",
+    "isSimulation": false,
+    "status": "VERIFICATION REQUIRED",
+    "thermalFeatures": {
+      "brightnessK": 314.2,
+      "frpMW": 6.8,
+      "confidence": "low (48%)",
+      "scan": 0.62,
+      "track": 0.54,
+      "persistenceHours": 0.6,
+      "dayNight": "D",
+      "sensorBand": "MODIS Band 21 (3.96 μm)"
+    },
+    "contextualFactors": {
+      "landUseType": "Mixed Semi-Arid Scrub & Stone Quarry Edge",
+      "landUseDescription": "Transitional scrubland border in Pali district, Rajasthan.",
+      "agriculturalContext": "Non-arable dry stony terrain.",
+      "isCropHarvestSeason": false,
+      "industrialProximityKm": 3.8,
+      "nearestIndustrialFacility": "Limestone Crushing Yard (3.8 km)",
+      "vegetationContext": "Sparse thorny xerophytic vegetation, rock outcrops, NDVI: 0.16.",
+      "ndviValue": 0.16,
+      "historicalPattern": "Occasional solar reflection glint or small campfire flagged by algorithm.",
+      "clusterCount": 1,
+      "settlementProximityKm": 6.2
+    },
+    "satelliteImagery": {
+      "available": false,
+      "statusText": "Satellite imagery unavailable for this event — Thermal observation available",
+      "imageType": "none",
+      "imageUrl": null,
+      "isDemoImage": false,
+      "sensorName": null,
+      "passTime": null
+    },
+    "imageAnalysis": {
+      "isAnalyzed": false,
+      "isPrototype": true,
+      "modelUsed": "Prototype Visual Analysis",
+      "detectedFeatures": [],
+      "visualSummary": "No optical imagery available to disambiguate thermal source from surface glint.",
+      "analyzedAt": null
+    },
+    "categorization": {
+      "primaryCategory": "unknown_insufficient",
+      "categoryLabel": "❓ Unknown / Insufficient Evidence",
+      "assessment": "Insufficient evidence for reliable automated categorization. Multi-source observations are conflicting or inconclusive.",
+      "supportingEvidence": [
+        "Multiple contradictory or weak contextual indicators",
+        "Thermal anomaly detected (6.8 MW, 314.2 K)",
+        "Land-use context does not decisively match a single dominant source"
+      ],
+      "contradictingOrMissing": [
+        "Ground verification not yet conducted",
+        "High-resolution multi-spectral imagery unavailable",
+        "No clear facility or field correlation"
+      ],
+      "alternativeExplanations": [
+        {
+          "category": "waste_burning",
+          "categoryLabel": "🗑️ Waste / Open Burning",
+          "level": "Low evidence",
+          "rationale": "Low-to-moderate thermal output (6.8 MW) typical of localized open waste combustion"
+        },
+        {
+          "category": "agricultural_burning",
+          "categoryLabel": "🌾 Agricultural Burning",
+          "level": "Low evidence",
+          "rationale": "Short-duration thermal anomaly (0.6 hrs), consistent with rapid field stubble combustion"
+        },
+        {
+          "category": "industrial_incident",
+          "categoryLabel": "🏭 Industrial Incident",
+          "level": "Low evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "vegetation_fire",
+          "categoryLabel": "🌳 Vegetation / Wildland Fire",
+          "level": "Insufficient evidence",
+          "rationale": "Lack of supportive land-use or sensor indicators."
+        },
+        {
+          "category": "unknown_insufficient",
+          "categoryLabel": "❓ Unknown / Unresolved",
+          "level": "Strong evidence",
+          "rationale": "Uncertainty remains pending field inspection and high-resolution optical passes."
+        }
+      ],
+      "evidenceStatus": "Insufficient Evidence — Ground Verification Recommended",
+      "investigationPriority": 38,
+      "priorityLevel": "LOW",
+      "priorityExplanation": "This score represents investigation priority based on thermal intensity, persistence, proximity to structures, and uncertainty. It is NOT a probability of fire."
+    },
+    "groundEvidence": [],
+    "advancedML": {
+      "isolationForestScore": -0.21,
+      "isolationForestLabel": "Typical Seasonal Thermal Profile",
+      "randomForestWeights": [
+        {
+          "category": "agricultural_burning",
+          "label": "🌾 Agricultural Burning",
+          "weight": 0.286
+        },
+        {
+          "category": "industrial_incident",
+          "label": "🏭 Industrial Incident",
+          "weight": 0.286
+        },
+        {
+          "category": "vegetation_fire",
+          "label": "🌳 Vegetation Fire",
+          "weight": 0
+        },
+        {
+          "category": "waste_burning",
+          "label": "🗑️ Waste / Open Burning",
+          "weight": 0.429
+        }
+      ],
+      "featureImportance": [
+        {
+          "feature": "Land-Use Classification",
+          "importance": 0.34,
+          "direction": "neutral",
+          "contribution": "Classified as Mixed Semi-Arid Scrub & Stone Quarry Edge"
+        },
+        {
+          "feature": "Industrial Proximity Buffer",
+          "importance": 0.26,
+          "direction": "refutes",
+          "contribution": "3.8 km to closest registered industrial asset"
+        },
+        {
+          "feature": "Fire Radiative Power (FRP)",
+          "importance": 0.18,
+          "direction": "supports",
+          "contribution": "6.8 MW energy dissipation rate"
+        },
+        {
+          "feature": "Seasonal Phenology Window",
+          "importance": 0.14,
+          "direction": "neutral",
+          "contribution": "Off-season baseline"
+        },
+        {
+          "feature": "Thermal Persistence (Hours)",
+          "importance": 0.08,
+          "direction": "supports",
+          "contribution": "0.6 hrs across successive overpasses"
+        }
+      ],
+      "spatialClustering": {
+        "clusterId": "CLUST-SINGLE-0.6",
+        "nearbyHotspotsCount": 1,
+        "spatialSpreadKm": 0.35
+      }
+    },
+    "timeline": [
+      {
+        "id": "tl-401",
+        "time": "07:22",
+        "title": "Marginal thermal anomaly detected",
+        "description": "MODIS Aqua recorded low-confidence (48%) thermal reading: 6.8 MW FRP.",
+        "stage": "DETECTED"
+      },
+      {
+        "id": "tl-402",
+        "time": "07:25",
+        "title": "Contextual analysis completed",
+        "description": "Mixed scrub and quarry edge. No dominant single source signature.",
+        "stage": "ANALYSIS"
+      },
+      {
+        "id": "tl-403",
+        "time": "07:26",
+        "title": "Insufficient evidence flagged",
+        "description": "Categorized as Unknown / Insufficient Evidence. AI refused forced classification.",
+        "stage": "CATEGORIZED"
+      },
+      {
+        "id": "tl-404",
+        "time": "07:28",
+        "title": "Ground verification recommended",
+        "description": "System requests field inspection before any operational intervention.",
+        "stage": "VERIFICATION REQUIRED"
+      }
+    ]
+  },
+  {
+    "id": "th-1210",
+    "eventNumber": "TH-1210",
+    "title": "Simlipal Reserve Buffer Forest Fire Front",
+    "region": "Odisha, India",
+    "latitude": 21.8492,
+    "longitude": 86.3214,
+    "detectionTimestamp": "2026-09-18T06:45:00Z",
+    "satelliteSource": "VIIRS (NOAA-20)",
+    "instrument": "VIIRS",
+    "isSimulation": true,
+    "status": "INVESTIGATION REQUIRED",
+    "thermalFeatures": {
+      "brightnessK": 341.6,
+      "frpMW": 42,
+      "confidence": "high (92%)",
+      "scan": 0.375,
+      "track": 0.375,
+      "persistenceHours": 6.5,
+      "dayNight": "D",
+      "sensorBand": "VIIRS I-4 (3.74 μm)"
+    },
+    "contextualFactors": {
+      "landUseType": "Dense Deciduous Forest / Reserve Canopy",
+      "landUseDescription": "Continuous Sal forest parcel in Simlipal Tiger Reserve buffer, Odisha.",
+      "agriculturalContext": "Zero agricultural activity within 15 km reserve boundary.",
+      "isCropHarvestSeason": false,
+      "industrialProximityKm": 26,
+      "nearestIndustrialFacility": null,
+      "vegetationContext": "Dry deciduous Sal leaf litter, high fuel load, NDVI: 0.64.",
+      "ndviValue": 0.64,
+      "historicalPattern": "Pre-monsoon forest floor leaf litter fire corridor.",
+      "clusterCount": 8,
+      "settlementProximityKm": 12
+    },
+    "satelliteImagery": {
+      "available": true,
+      "statusText": "Associated satellite imagery available (DEMO SATELLITE IMAGE)",
+      "imageType": "demo_uploaded",
+      "imageUrl": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=600&q=80",
+      "isDemoImage": true,
+      "sensorName": "Sentinel-2 MSI (Demonstration Tile)",
+      "passTime": "2026-09-18T06:50:00Z"
+    },
+    "imageAnalysis": {
+      "isAnalyzed": true,
+      "isPrototype": true,
+      "modelUsed": "Prototype Visual Analysis (Heuristic Context Engine)",
+      "detectedFeatures": [
+        {
+          "name": "Smoke visible",
+          "observed": true,
+          "confidenceNote": "Low-density diffuse atmospheric dispersion observed"
+        },
+        {
+          "name": "Flame-like visual indicators",
+          "observed": false,
+          "confidenceNote": "No distinct open flame geometry resolved"
+        },
+        {
+          "name": "Agricultural field pattern",
+          "observed": false,
+          "confidenceNote": "No distinct field grid pattern"
+        },
+        {
+          "name": "Industrial structures",
+          "observed": false,
+          "confidenceNote": "No industrial infrastructure identified"
+        },
+        {
+          "name": "Dense vegetation",
+          "observed": true,
+          "confidenceNote": "Continuous canopy matrix with high spectral absorption"
+        },
+        {
+          "name": "Open/waste area",
+          "observed": false,
+          "confidenceNote": "No waste mound features"
+        },
+        {
+          "name": "Urban surroundings",
+          "observed": false,
+          "confidenceNote": "Peri-urban access road network present in 2km buffer"
+        },
+        {
+          "name": "No obvious visual evidence",
+          "observed": false,
+          "confidenceNote": "Observation obscured by sub-pixel resolution or atmospheric haze"
+        }
+      ],
+      "visualSummary": "Visual context displays continuous scrub vegetation without structural containment boundaries.",
+      "analyzedAt": "2026-09-18T16:49:07.901Z"
+    },
+    "categorization": {
+      "primaryCategory": "vegetation_fire",
+      "categoryLabel": "🌳 Vegetation / Wildland Fire",
+      "assessment": "Active vegetation or wildland perimeter fire",
+      "supportingEvidence": [
+        "Dense vegetation / protected forest cover context (Dense Deciduous Forest / Reserve Canopy)",
+        "High canopy vegetation index (NDVI: 0.64) indicates dense biomass fuel load",
+        "Visual analysis: dense contiguous vegetation canopy surrounding hotspot"
+      ],
+      "contradictingOrMissing": [
+        "Ground verification evidence not yet available"
+      ],
+      "alternativeExplanations": [
+        {
+          "category": "vegetation_fire",
+          "categoryLabel": "🌳 Vegetation / Wildland Fire",
+          "level": "Strong evidence",
+          "rationale": "Dense vegetation / protected forest cover context (Dense Deciduous Forest / Reserve Canopy); High canopy vegetation index (NDVI: 0.64) indicates dense biomass fuel load"
+        },
+        {
+          "category": "agricultural_burning",
+          "categoryLabel": "🌾 Agricultural Burning",
+          "level": "Low evidence",
+          "rationale": "No nearby industrial facility detected (nearest is 26.0 km away); Visual analysis: plume dispersal pattern consistent with open-air combustion"
+        },
+        {
+          "category": "industrial_incident",
+          "categoryLabel": "🏭 Industrial Incident",
+          "level": "Low evidence",
+          "rationale": "Persistent thermal anomaly detected across multiple observation cycles (6.5 hrs)"
+        },
+        {
+          "category": "waste_burning",
+          "categoryLabel": "🗑️ Waste / Open Burning",
+          "level": "Low evidence",
+          "rationale": "Low-to-moderate thermal output (42 MW) typical of localized open waste combustion"
+        },
+        {
+          "category": "unknown_insufficient",
+          "categoryLabel": "❓ Unknown / Unresolved",
+          "level": "Possible",
+          "rationale": "Uncertainty remains pending field inspection and high-resolution optical passes."
+        }
+      ],
+      "evidenceStatus": "Strong Evidence",
+      "investigationPriority": 61,
+      "priorityLevel": "MEDIUM",
+      "priorityExplanation": "This score represents investigation priority based on thermal intensity, persistence, proximity to structures, and uncertainty. It is NOT a probability of fire."
+    },
+    "groundEvidence": [],
+    "evidenceFusion": {
+      "satelliteSummary": [
+        "Satellite Source: 341.6K brightness, 42 MW FRP",
+        "Duration & Area: ~6.5 hrs persistence, localized footprint",
+        "Context: Dense Deciduous Forest / Reserve Canopy, Industrial distance 26 km"
+      ],
+      "imageSummary": [
+        "Smoke visible",
+        "Dense vegetation"
+      ],
+      "groundSummary": [
+        "Ground verification pending"
+      ],
+      "combinedAssessment": "Vegetation Fire — Containment Monitoring Recommended",
+      "finalCategory": "vegetation_fire",
+      "confidenceOutcome": "Strong Evidence",
+      "recommendedAction": "Alert regional forest range office and monitor wind dispersion vectors."
+    },
+    "advancedML": {
+      "isolationForestScore": -0.6,
+      "isolationForestLabel": "High Thermal Outlier (Uncommon Signature)",
+      "randomForestWeights": [
+        {
+          "category": "agricultural_burning",
+          "label": "🌾 Agricultural Burning",
+          "weight": 0.1
+        },
+        {
+          "category": "industrial_incident",
+          "label": "🏭 Industrial Incident",
+          "weight": 0.1
+        },
+        {
+          "category": "vegetation_fire",
+          "label": "🌳 Vegetation Fire",
+          "weight": 0.7
+        },
+        {
+          "category": "waste_burning",
+          "label": "🗑️ Waste / Open Burning",
+          "weight": 0.1
+        }
+      ],
+      "featureImportance": [
+        {
+          "feature": "Land-Use Classification",
+          "importance": 0.34,
+          "direction": "neutral",
+          "contribution": "Classified as Dense Deciduous Forest / Reserve Canopy"
+        },
+        {
+          "feature": "Industrial Proximity Buffer",
+          "importance": 0.26,
+          "direction": "refutes",
+          "contribution": "26 km to closest registered industrial asset"
+        },
+        {
+          "feature": "Fire Radiative Power (FRP)",
+          "importance": 0.18,
+          "direction": "supports",
+          "contribution": "42 MW energy dissipation rate"
+        },
+        {
+          "feature": "Seasonal Phenology Window",
+          "importance": 0.14,
+          "direction": "neutral",
+          "contribution": "Off-season baseline"
+        },
+        {
+          "feature": "Thermal Persistence (Hours)",
+          "importance": 0.08,
+          "direction": "supports",
+          "contribution": "6.5 hrs across successive overpasses"
+        }
+      ],
+      "spatialClustering": {
+        "clusterId": "CLUST-MULTI-0.4",
+        "nearbyHotspotsCount": 8,
+        "spatialSpreadKm": 2.8
+      }
+    },
+    "timeline": [
+      {
+        "id": "tl-501",
+        "time": "06:45",
+        "title": "Multi-pixel thermal anomaly detected",
+        "description": "VIIRS NOAA-20 recorded 8 contiguous thermal pixels totaling 42 MW FRP.",
+        "stage": "DETECTED"
+      },
+      {
+        "id": "tl-502",
+        "time": "06:48",
+        "title": "Reserve boundary buffer identified",
+        "description": "Located in Sal forest reserve. High biomass index (NDVI: 0.64).",
+        "stage": "ANALYSIS"
+      },
+      {
+        "id": "tl-503",
+        "time": "06:50",
+        "title": "Categorized as Vegetation / Wildland Fire",
+        "description": "Investigation priority: 84/100 (HIGH PRIORITY). Range office alert prepared.",
+        "stage": "CATEGORIZED"
+      }
+    ]
+  }
+]

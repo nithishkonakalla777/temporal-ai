@@ -1,0 +1,6 @@
+{
+  "name": "THERMOSCOPE AI",
+  "description": "AI-Powered Thermal Anomaly Categorization & Ground Verification (SIH Prototype)",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
